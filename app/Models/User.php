@@ -27,4 +27,26 @@ class User extends CreopseUser
     {
         return $builder->where('profile_type', ProfileType::SUBSCRIBER->value);
     }
+
+    /**
+     * Team Member Profile accessor
+     *
+     * @return bool
+     */
+    public function getHasTeamMemberProfileAttribute()
+    {
+        return $this->profile_type == ProfileType::TeamMember->value;
+    }
+
+    /**
+     * Team Member Profile scope
+     *
+     * @return Builder
+     */
+    public function scopeWhereHasTeamMemberProfile(Builder $builder)
+    {
+        return $builder->where('profile_type', ProfileType::TeamMember->value);
+    }
+
+
 }
