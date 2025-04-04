@@ -132,7 +132,7 @@ export default defineConfig({
             'useLoadingBar',
           ],
           'laravel-vue-i18n': [
-            'trans',
+            ['trans', '$t'],
             'wTrans',
             'transChoice',
             'wTransChoice',
