@@ -6,5 +6,5 @@ enum ProfileType: string
 {
     case SUBSCRIBER = 'App\\Models\\SubscriberProfile';
 
-    case TeamMember = 'App\\Models\\TeamMemberProfile';
+    case TEAMMEMBER = 'App\\Models\\TeamMemberProfile';
 }

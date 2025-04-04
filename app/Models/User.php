@@ -2,9 +2,12 @@
 
 namespace App\Models;
 
+use Creopse\Creopse\Laratrust\Traits\HasRoles;
+
 use App\Enums\ProfileType;
 use Illuminate\Database\Eloquent\Builder;
 use Creopse\Creopse\Models\User as CreopseUser;
+use Creopse\Creopse\Models\Role;
 
 class User extends CreopseUser
 {
@@ -35,7 +38,7 @@ class User extends CreopseUser
      */
     public function getHasTeamMemberProfileAttribute()
     {
-        return $this->profile_type == ProfileType::TeamMember->value;
+        return $this->profile_type == ProfileType::TEAMMEMBER->value;
     }
 
     /**
@@ -45,7 +48,7 @@ class User extends CreopseUser
      */
     public function scopeWhereHasTeamMemberProfile(Builder $builder)
     {
-        return $builder->where('profile_type', ProfileType::TeamMember->value);
+        return $builder->where('profile_type', ProfileType::TEAMMEMBER->value);
     }
 
 

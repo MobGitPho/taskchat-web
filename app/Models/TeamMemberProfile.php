@@ -13,6 +13,6 @@ class TeamMemberProfile extends Model
 
     public function user()
     {
-        return $this->morphOne('Creopse\Creopse\Models\User', 'profile');
+        return $this->morphMany('Creopse\Creopse\Models\User', 'profile');
     }
 }
