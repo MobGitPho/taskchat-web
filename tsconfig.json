@@ -1,0 +1,22 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "compilerOptions": {
+    "strict": true,
+    "allowJs": true,
+    "noImplicitAny": false,
+    "types": ["vitest", "vite/client", "naive-ui/volar"],
+    "paths": {
+      "@/*": ["resources/js/*"],
+      "ziggy-js": ["./vendor/tightenco/ziggy"]
+    },
+    "baseUrl": "."
+  },
+  "include": [
+    "resources/**/*.ts",
+    "resources/**/*.d.ts",
+    "resources/**/*.vue",
+    "resources/*.vue",
+    "./*.config.ts",
+    "./*.d.ts"
+  ]
+}

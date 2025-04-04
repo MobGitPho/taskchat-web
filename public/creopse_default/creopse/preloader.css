@@ -1,0 +1,28 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#preloader {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#preloader > .preloader-img {
+  width: 180px;
+  animation: rotate 5s linear infinite;
+}

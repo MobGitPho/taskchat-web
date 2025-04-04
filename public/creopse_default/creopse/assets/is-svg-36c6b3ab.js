@@ -1,0 +1,1 @@
+import{f as t}from"./fast-xml-parser-cd8a169d.js";function s(e){if(typeof e!="string")throw new TypeError(`Expected a \`string\`, got \`${typeof e}\``);if(e=e.trim(),e.length===0||t.XMLValidator.validate(e)!==!0)return!1;let r;const a=new t.XMLParser;try{r=a.parse(e)}catch{return!1}return!(!r||!Object.keys(r).some(f=>f.toLowerCase()==="svg"))}export{s as i};
